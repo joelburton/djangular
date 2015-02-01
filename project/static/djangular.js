@@ -12,12 +12,12 @@ angular.module('catsApp', ['ngRoute', 'ngResource'])
                 templateUrl: '/static/cats.html',
                 controller: 'CatsController',
                 controllerAs: 'c',
-                resolve: {'cats': function(Cat) { debugger; return Cat.query(); }}
+                resolve: {'cats': function(Cat) { return Cat.query(); }}
         })
     })
     .factory('Cat', function ($resource) {
         return $resource('/api/cats/:id', {'id': '@id'});
     })
-    .controller('CatController', function(cat) { this.cat = cat; console.log(cat); })
-    .controller('CatsController', function(cats) { this.cats = cats; console.log(cats); })
+    .controller('CatController', function(cat) { this.cat = cat; })
+    .controller('CatsController', function(cats) { this.cats = cats; })
 ;
