@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.views import generic
+
 from rest_framework import viewsets
 from rest_framework import serializers
-from cats.models import Cat
+
+from .models import Cat
 
 
 class HomepageView(generic.TemplateView):

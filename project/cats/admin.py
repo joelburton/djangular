@@ -1,5 +1,6 @@
 from django.contrib import admin
-from cats.models import Cat
+
+from .models import Cat
 
 
 admin.site.register(Cat)

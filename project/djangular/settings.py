@@ -89,6 +89,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
+
+# Add debug toolbar with the request history add on panel
+
 DEBUG_TOOLBAR_PANELS = [
     'ddt_request_history.panels.request_history.RequestHistoryPanel',
     'debug_toolbar.panels.versions.VersionsPanel',
